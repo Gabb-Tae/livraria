@@ -26,4 +26,4 @@ class Livro(models.Model):
     ISBN = models.CharField(max_length=32)
     quantidade = models.IntegerField()
     preco = models.DecimalField(max_digits=7, decimal_places=2)
-    categoria = models.CharField(max_length=255)
+    categoria = models.ForeignKey()
