@@ -16,7 +16,7 @@ class Editora(models.Model):
         return self.nome
 
 class Autor(models.Model):
-    nome = models.CharField(max_length=255)
+    nome = models.CharField(max_length=256)
     email = models.EmailField(max_length=50)
 
     def __str__(self):
