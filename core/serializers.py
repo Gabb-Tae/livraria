@@ -2,7 +2,7 @@ from dataclasses import fields
 from statistics import mode
 from rest_framework.serializers import ModelSerializer
 
-from core.models import Categoria, Editora, Livro
+from core.models import Categoria, Editora, Livro, Autor
 
 class CategoriaSerializer(ModelSerializer):
     class Meta:
@@ -17,4 +17,10 @@ class EditoraSerializer(ModelSerializer):
 class LivroSerializer(ModelSerializer):
     class Meta:
         model = Livro
+        fields = "__all__"
+        depth = 1
+
+class AutorSerializer(ModelSerializer):
+    class Meta:
+        model = Autor
         fields = "__all__"
